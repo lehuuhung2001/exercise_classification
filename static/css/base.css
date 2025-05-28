@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+  }
+  
+
+.nav{
+    width: 50%;
+    flex: 1;  /* Mỗi mục sẽ chiếm 50% chiều rộng */
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    cursor: pointer;
+    color: #fff;
+    
+}
+.nav a {
+    color: #fff;
+    text-decoration: none;
+}

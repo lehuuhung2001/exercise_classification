@@ -1,0 +1,35 @@
+.custom-button {
+    background-color: #9AF764;
+    color: white; /* Màu chữ tối để tương phản tốt */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(154, 247, 100, 0.6);
+    user-select: none;
+  }
+  
+  .custom-button:hover {
+    background-color: #7ccf4d; /* Tối hơn một chút khi hover */
+    box-shadow: 0 4px 10px rgba(124, 207, 77, 0.8);
+  }
+  
+  .custom-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(154, 247, 100, 0.8);
+  }
+  
+  .custom-button:active {
+    background-color: #6bb843; /* Tối hơn nữa khi nhấn */
+    box-shadow: 0 2px 5px rgba(107, 184, 67, 0.9);
+  }
+  
+  .custom-button:disabled {
+    background-color: #c0c0c0;
+    cursor: not-allowed;
+    box-shadow: none;
+    color: #666666;
+  }

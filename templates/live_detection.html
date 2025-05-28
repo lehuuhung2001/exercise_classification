@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Live Detection</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <style>
+        body {
+            background-color: #333;
+            
+            
+        }
+          #video-container {
+            display: flex;
+            justify-content: center;  
+            align-items: center;      
+            /* height: 100vh;     */
+            margin-top: 60px;       
+        }
+    </style>
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <!-- <h1>Real-Time</h1> -->
+    <div id="video-container" >
+        <img src="{{ url_for('video_feed') }}" width="720" height="540" />
+    </div>
+    {% endblock %}
+</body>
+</html>

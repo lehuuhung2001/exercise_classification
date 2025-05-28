@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Navigator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <style>
+        p{
+            color: white;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: large;
+            
+        }
+        p.color_text {
+            color: #333; 
+        }
+        div.active {
+            background-color: #7CFC00; 
+            border-radius: 5px;
+
+        }
+
+    </style>
+    <script>
+    document.querySelectorAll('.nav a').forEach(link => {
+        if (link.href === window.location.href) {
+        link.classList.add('active');
+        link.classList.add('color_text');
+        } else {
+        link.classList.remove('active');
+        link.classList.remove('color_text');
+        }
+    });
+    </script>
+</head>
+<body>
+    <div class="topnav">
+        <div class="nav {% if request.path == '/' %}active{% endif %}" onclick="window.location.href='/'">
+        <p class="{% if request.path == '/' %}color_text{% endif %}">LIVE DETECTION</p>
+        </div>
+        <div class="nav {% if request.path == '/videoclassification' %}active{% endif %}" onclick="window.location.href='/videoclassification'">
+        <p class="{% if request.path == '/videoclassification' %}color_text{% endif %}">VIDEO CLASSIFICATION</p>
+        </div>
+      </div>
+      {% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Detected Exercise</title>
+    <style>
+        body {
+            background-color: #333;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+        h1{
+            color: #9AF764;
+        }
+        #video-container {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;       
+        }
+    </style>
+    <link rel="stylesheet" href="../static/css/button.css">
+</head>
+<body>
+    <!-- <h2>Upload ảnh/video động tác để phân loại</h2>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="video/mp4" value="Select" >
+        <input type="submit" value="Upload">
+    </form> -->
+    <div style="height: 100px; display: flex; justify-content: center; align-items: center;">
+            <h1 style="text-transform: uppercase; color: white;">Detected Exercise:</h1>
+            {% if label_most %}
+            <h1 style="margin-left: 10px;"> {{ label_most }}</h1>
+            {% endif %}
+    </div>
+<div id="video-container">
+    <div style="margin: 0 auto">
+    {% if video_url %}
+        <video width="600", height="600" controls>
+            <source src="{{ video_url }}" >
+        </video>
+        <!-- <form action="/identify" method="post">
+            <button>Indetify</button>
+        </form> -->
+    {% endif %}
+    </div>
+
+    <!-- <a href="/">Back</a> -->
+    
+    <!-- <div>
+        {% if label_most %}
+          <h2>{{ label_most }}</h2>
+        {% endif %}
+    </div> -->
+    <form action="/" style="position: absolute; bottom: 5px; right: 80px;" >
+        <button class="custom-button">Back</button>
+    </form>
+</div>
+
+
+</body>
+</html>
